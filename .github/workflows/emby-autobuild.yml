@@ -48,4 +48,4 @@ jobs:
       - name: Build and push Docker image
         if: env.skip_build != 'true'
         run: |
-          docker buildx build --push --build-arg EMBY_TAG=$LATEST_TAG -t rajiska/emby-n150-fixed:$LATEST_TAG .
+          docker buildx build --push --build-arg EMBY_TAG=$LATEST_TAG -t rajiska/emby-n150-fixed:$LATEST_TAG -t rajiska/emby-n150-fixed:latest .
